@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Youtube Hitlist Player</title>
+    <link rel="stylesheet" type="text/css" href="hitlist.css"/>
+    <!-- include permitted libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+
+</head>
+    <body>
+        <div ng-app="search" ng-controller="myCtrl">
+            <div id="header">
+                CS2003 Web1 Assignment: Youtube hitlist
+            </div>
+            <nav id="searchform" >
+                <form>
+                    <label for="query">Fulltext:</label>
+                    <input type="search" id="query" ng-model="myQuery"/>
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" ng-model="startDate"/>
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" ng-model="endDate"/>
+                    <button id="search" type="submit" ng-click = "submitSearch();" >Search</button>
+                </form>
+            </nav>
+                <nav id="videolist">
+                    <ol >
+                        <li ng-repeat="item in videoObject">
+                            <img data-ng-src={{item.thumbUrl}} ng-click="playVideo(item);"><br/>
+                            <div>
+                            {{item.title}}
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            <section id="defaultContent">
+                <h1>Welcome to the CS2003 Youtube Hitlist!</h1>
+                <p>
+                    Use the search fields above, then select a video from the list on the left to play it.
+                </p>
+            </section>
+            <section id="video" ng-model="videoPlayer">
+                <h1 ng-model="videoTitle"> {{title}} </h1>
+                <!-- youtube embed code -->
+                <iframe width="560" height="315" src="" id="iframe" frameborder="0" allowfullscreen=0> </iframe>
+
+                <p id="description" ng-model="description">
+                    {{description}}
+                </p>
+            </section>
+        </div>
+        <script src="hitlist.js"></script>
+
+    </body>
+</html>
+
+

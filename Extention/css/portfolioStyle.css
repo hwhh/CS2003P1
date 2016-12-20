@@ -1,0 +1,539 @@
+@charset "utf-8";
+
+/* General styles*/
+/*Define your own styles in this stylesheet*/
+body{
+	background-color: rgba(254,254,254,1);
+	color: #FFFFFF;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2em;
+}
+p{
+	font-size: 18px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	color: rgba(72,72,72,1);
+	line-height: 1.8;
+
+}
+
+#clear {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	background-color: #70c7be;
+	border-radius: 4px;
+	color: #ffffff !important;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	height: 2.85em;
+	line-height: 2.95em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	width: 7em;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    padding: 0 1em;
+    border: 0 none;
+    z-index : -1;
+    position: inherit;
+    float: right;
+}
+
+
+
+/* Link styles*/
+a {
+	color: rgba(146,146,146,1.00);
+}
+a:visited {
+	color: rgba(146,146,146,1.00);
+}
+a:hover {
+	color: rgba(255,255,255,1.00);
+}
+
+.linkStyle {
+	color: rgba(146,146,146,1.00);
+	font-family: 'montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	text-decoration: none;
+}
+
+
+/* Header & HERO styles*/
+.logo {
+	text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.heroHeader {
+	height: 450px;
+
+}
+
+#banner {
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	background-size: cover;
+	background: url(../images/banner.jpg) no-repeat center;
+	border-top: 0;
+	overflow: hidden;
+}
+
+#clear{
+    float: right;
+}
+#playlistTitle{
+    width:120px;
+}
+
+#playlist{
+    z-index : -1;
+    margin-left:auto;
+    margin-right:auto;
+    max-height:360px;
+    width:auto;
+    float: right;
+    overflow: auto;
+    font-size: 0.7em;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#description{
+    font-size: 1em;
+    position: inherit;
+}
+
+#playlistHeader{
+	float: right;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color: rgba(113,113,113,1);
+	text-align: right;
+}
+
+
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+/* Typography styles*/
+.textStyle {
+	font-family: 'montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: rgb(116, 116, 116);
+}
+.headingStyle {
+	color: rgba(146,146,146,1.00);
+	font-size: 32px;
+}
+.mainHeading {
+	color: rgba(253,253,253,1.00);
+	text-align: center;
+	margin-top: 10%;
+	font-size: 48px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+.mainTagline {
+	text-align: center;
+	color: rgba(255,255,255,1.00);
+	font-size: 16px;
+	margin-top: -1%;
+
+}
+
+input, select, textarea{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color: #4a4a4a;
+}
+
+
+#playlist:hover {
+    color: rgba(255,255,255,1.00);
+}
+
+
+#search{
+	border-radius: 12px;
+	display: inline-block;
+ 	color: rgba(80,80,80,1);
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	text-align: center;
+	background-color: #FFFFFF;
+	padding: 6px 20px;
+	position: relative;
+	margin-left: 20px;
+	border-style: none;
+}
+#sectionOne {
+	text-align: justify;
+}
+#sectionTwo {
+	text-align: justify;
+}
+
+#defaultContent {
+    padding: 1em;
+    display: block;
+    position: relative;
+}
+
+#video{
+    float: inherit;
+    margin-left:auto;
+    margin-right:auto;
+    height:auto;
+    width:auto;
+    display: none;
+}
+
+/* Gallery styles */
+.videolist{
+    padding-top:20px;
+    padding-bottom:30px;
+
+}
+.paraContent{
+	font-size: 14px;
+	font-family: alice, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: rgb(116, 116, 116);
+	line-height: 1.8;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.contentArea{
+	font-size: 14px;
+	font-family: alice , sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	color: rgb(75, 75, 75);
+	line-height: 1.8;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.showAreaH2 {
+	
+}
+#secondaryStyling {
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+.secondarySection {
+	background-color: rgba(208,207,207,1.00);
+}
+.secondaryHeading {
+	color: rgba(255,255,255,1.00);
+	text-align: center;
+}
+
+.grid-gallery ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-gallery figure {
+    margin: 0;
+}
+
+.grid-gallery figure img {
+    display: block;
+    width: 100%;
+}
+
+.grid-gallery figcaption h3 {
+    margin: 0;
+    padding: 0 0 0.5em;
+}
+
+.grid-gallery figcaption p {
+    margin: 0;
+}
+
+/* Grid style */
+.grid-wrap {
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 0 1em 1.875em;
+}
+
+.grid {
+    margin: 0 auto;
+}
+
+.grid li {
+    width: 25%;
+    float: left;
+    cursor: pointer;
+}
+
+.grid figure {
+    padding: 15px;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.grid li:hover figure {
+    opacity: 0.7;
+}
+
+.grid figcaption {
+    background: #e4e4e4;
+    padding: 25px;
+}
+
+/* Slideshow style */
+.slideshow {
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.slideshow-open .slideshow {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.slideshow ul {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,150px);
+    transform: translate3d(0,0,150px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.slideshow ul.animatable li {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.slideshow-open .slideshow ul {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.slideshow li {
+    width: 660px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -280px 0 0 -330px;
+    visibility: hidden;
+}
+
+.slideshow li.show {
+    visibility: visible;
+}
+
+.slideshow li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.slideshow li.current:after {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.slideshow figure {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 50px solid #fff;
+    overflow: hidden;
+}
+
+.slideshow figcaption {
+    padding-bottom: 20px;
+}
+
+.slideshow figcaption h3 {
+    font-weight: 300;
+    font-size: 200%;
+}
+
+/* Navigation */
+.slideshow nav span {
+    position: fixed;
+    z-index: 1000;
+    color: #59656c;
+    text-align: center;
+    padding: 3%;
+    cursor: pointer;
+    font-size: 2.2em;
+}
+
+.slideshow nav span.nav-prev,
+.slideshow nav span.nav-next {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slideshow nav span.nav-next {
+    right: 0;
+}
+
+.slideshow nav span.nav-close {
+    top: 0;
+    right: 0;
+    padding: 0.5em 1em;
+    color: #31373a;
+}
+
+.icon:before,
+.icon:after {
+    font-family: 'fontawesome', sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+span.nav-prev:before {
+    content: "\e601";
+}
+
+span.nav-next:before  {
+    content: "\e600";
+}
+
+span.nav-close:before {
+    content: "\e602";
+}
+
+/* Info on arrow key navigation */
+.info-keys {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    font-size: 8px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.info-keys:before,
+.info-keys:after {
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 14px;
+    font-size: 12px;
+}
+
+.info-keys:before {
+    left: 10px;
+    content: "\e603";
+}
+
+.info-keys:after {
+    right: 10px;
+    content: "\e604";
+}
+
+/* Example media queries (reduce number of columns and change slideshow layout) */
+
+@media screen and (max-width: 60em) {
+    /* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
+    .grid li {
+        width: 33.3%;
+    }
+
+    .slideshow li {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    .slideshow li figure img {
+        width: auto;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .slideshow nav span,
+    .slideshow nav span.nav-close {
+        font-size: 1.8em;
+        padding: 0.3em;
+    }
+
+    .info-keys {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 35em) {
+    .grid li {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 24em) {
+    .grid li {
+        width: 100%;
+    }
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Practical1</title>
+        <link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+        <link href="css/portfolioResponsive.css" rel="stylesheet" type="text/css">
+        <link href="css/portfolioStyle.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+        <script src="http://use.edgefonts.net/montserrat:n4:default;alice:n4:default.js" type="text/javascript"></script>
+		<script src="js/respond.min.js"></script>
+        <script src="js/hitlist.js"></script>
+    </head>
+    
+    <body>
+
+    <!--Container starts here-->
+    <div id="outer" class="gridContainer clearfix" ng-app="search" ng-controller="myCtrl">
+        <element name="onLoad" ng-init= "submitSearch();"></element>
+        <section id="banner">
+            <header class="fluid hero heroHeader" >
+                    <h1 class="fluid mainHeading headingStyle"> CS2003 Web1 Assignment: Youtube hitlist</h1>
+                      <form>
+                          <label for="query">S<span style="">ea</span>rch: </label>
+                          <input type="search" id="query" ng-model="myQuery"/>
+                          <label for="startDate">Start Date: </label>
+                          <input type="date" id="startDate" ng-model="startDate"/>
+                          <label for="endDate">End Date: </label>
+                          <input type="date" id="endDate" ng-model="endDate"/>
+                          <button id="search" type="submit" ng-click = "submitSearch();" >Search</button>
+                      </form>
+               </header>
+          </section>
+
+
+      <!--Primary Container starts here-->
+
+        <div id="display">
+          <section id="defaultContent">
+              <article class="fluid textContainer">
+                <h1><strong>Welcome to the CS2003 Youtube<span> Hitlist!</span></strong></h1>
+                <p>Use the search fields above, then select a video from the list on the left to play it. Right click a video to add it to the playlist,
+                    if you want to remove it right click the video again whilst it's in the playlist</p>
+              </article>
+          </section>
+        <section id="videoPlaylist" ng-model="videoPlaylist">
+            <ul id="playlist">
+                <li id="id" ng-repeat="item in videoPlaylist">
+                    <figure>
+                        <img data-ng-src={{item.thumbUrl}} ng-click="playVideo(item);" ng-right-click="removeFromPlaylist(item);"/>
+                        <figcaption id="playlistTitle" class="textStyle">{{item.title}} </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <button id="clear" type="submit" ng-click = "clearPlaylist();" >clear</button>
+        </section>
+
+          <section id="video" ng-model="videoPlayer">
+            <h1 id="videoTitle" ng-model="videoTitle"> {{title}} </h1>
+                    <!-- youtube embed code -->
+              <iframe id="iframe" type="text/html" width="560" height="315" src="" frameborder="0" allowfullscreen=0></iframe>
+              <p class="caption" id="description" ng-model="description">{{description}}</p>
+              <p class="caption" id="viewCount"> View Count</p>
+          </section>
+        </div>
+      
+      <!--Gallery starts here --->
+        <div id="main">
+            <nav id="videolist">
+                <div id="grid-gallery" class="grid-gallery">
+                    <section class="grid-wrap">
+                        <ul class="grid">
+                            <li class="grid-sizer"></li><!-- for Masonry column width -->
+                            <li ng-repeat="item in videoObject">
+                                <figure>
+                                    <img data-ng-src={{item.thumbUrl}} ng-click="playVideo(item);" ng-right-click="addToPlaylist(item);"/>
+                                    <figcaption class="textStyle">{{item.title}} </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </section><!-- // slideshow -->
+                </div><!-- // grid-gallery -->
+            </nav>
+        </div>
+    </div>
+    <!--Container ends here-->
+    </body>
+</html>
